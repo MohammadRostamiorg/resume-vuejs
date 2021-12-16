@@ -1,0 +1,253 @@
+@font-face {
+  font-family: iransans;
+  src: url(/src/assets/fonts/AIranianSans.ttf);
+}
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  user-select: none;
+}
+body {
+  background: #1a1a1f;
+}
+#app {
+  font-family: iransans, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #fff;
+  margin: 5vh auto;
+  width: 80vw;
+  height: 90vh;
+  justify-content: space-evenly;
+  background: #31313a;
+  display: flex;
+  flex-direction: row-reverse;
+}
+#navigation {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  border-left: 1px solid #1a1a1a;
+}
+#navigation li {
+  width: 100%;
+  height: 100px;
+  border-bottom: 1px solid #1a1a1a;
+}
+#navigation li a {
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  width: 100px;
+  line-height: 100px;
+  text-decoration: none !important;
+}
+#navigation li a img {
+  position: absolute;
+  margin-top: 10px;
+  width: 24px;
+}
+#navigation li a span {
+  white-space: nowrap;
+  display: block;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  padding: 0 5px;
+  direction: rtl;
+}
+#main-info {
+  flex: 3;
+  border-left: 1px solid #1a1a1a;
+  position: relative;
+  height:100%;
+  overflow: auto;
+}
+#main-info-images img:first-child {
+  width: 100%;
+  border-bottom-left-radius: 30%;
+  border-bottom-right-radius: 30%;
+}
+#main-info-images img:last-child {
+  width: 100px;
+  border-radius: 50%;
+  transform: translateY(-50%);
+}
+#main-info #name {
+  font-family: iransans;
+  font-size: 1.3rem;
+  transform: translateY(-100%);
+  color: #fc1;
+}
+#main-info #min-about {
+  font-family: iransans;
+  text-align: justify;
+  font: 0.9rem sans-serif;
+  direction: rtl;
+  padding: 0 1rem;
+  min-height: calc(90% - 350px);
+  
+}
+#main-info-social-icons {
+  height: 10%;
+  float: l;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#router-view {
+  flex: 7;
+}
+
+body.about #navigation li:first-child a {
+  color: orange !important;
+}
+
+body.skills #navigation li:nth-child(2) a {
+  color: orange !important;
+}
+body.projects #navigation li:nth-child(3) a {
+  color: orange !important;
+}
+body.achievement #navigation li:nth-child(4) a {
+  color: orange !important;
+}
+
+#about {
+  direction: rtl;
+  font-family: iransans;
+  overflow: auto !important;
+  height: 100%;
+}
+#about > p {
+  text-align: justify;
+  padding: 30px;
+  line-height: 1.7;
+  color: #ababab;
+}
+#about > h2,
+#skills > h2,
+#achievement > h2,
+#projects > h2 {
+  text-align: right;
+  padding: 20px 30px;
+}
+#about-info .row {
+  text-align: right;
+  padding: 20px 30px;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px dotted #aaa;
+}
+
+#about-info .row:last-child,
+#skills .row:last-child,
+#projects .row:last-child {
+  margin-bottom: 20px;
+  border-bottom: none !important;
+}
+#about-info .row span:last-child {
+  color: #aeaeae;
+}
+#skills {
+  font-family: iransans;
+  overflow: auto !important;
+  height: 100%;
+  direction: rtl;
+}
+#main-skills-chart,
+#sub-skills-chart,
+#lang-skills-chart {
+  padding: 30px;
+}
+#skills .row {
+  display: flex;
+  direction: rtl;
+  flex-direction: column;
+  text-align: right;
+  border-bottom: 1px dotted #aaa;
+}
+#skills .row .skill-title {
+  margin-top: 15px;
+}
+#skills .row .skill-chart-parent {
+  margin: 20px 0;
+  border: 1px solid #aaa;
+  height: 20px;
+  border-radius: 3px;
+  overflow: hidden;
+}
+#skills .row .skill-chart-child {
+  background: linear-gradient(
+    45deg,
+    #d4093d,
+    #b60624,
+    #9e0812,
+    #d4093d,
+    #b60624,
+    #9e0812
+  );
+  height: 100%;
+  width: 50%;
+  display: block;
+}
+#skills #sub-skills-chart .row .skill-chart-child {
+  background: linear-gradient(
+    45deg,
+    #0a3d28,
+    #0f5b3c,
+    #147a51,
+    #0a3d28,
+    #0f5b3c,
+    #147a51
+  );
+}
+#skills #lang-skills-chart .row .skill-chart-child {
+  background: linear-gradient(
+    45deg,
+    #08233e,
+    #0d355d,
+    #11477d,
+    #08233e,
+    #0d355d,
+    #11477d
+  );
+}
+#skills .row .skill-description {
+  color: #aeaeae;
+  margin: 10px 0;
+}
+/*  projects section style*/
+#projects , #achievement {
+  font-family: iransans;
+  overflow: auto !important;
+  height: 100%;
+  direction: rtl;
+}
+#projects .row , #achievement div .row {
+  display: flex;
+  direction: rtl;
+  flex-direction: column;
+  text-align: right;
+  border-bottom: 1px dotted #aaa;
+  padding: 20px 30px;
+}
+#projects .row:last-child , #achievement div .row:last-child{
+  border-bottom: none;
+} 
+
+#projects .row h4, #achievement .row h4{
+  text-align: right;
+  padding: 20px 0;
+}
+hr + .row {
+  display: none;
+
+}
+#projects .row .project-about, #achievement .row .project-about{
+  text-align: justify;
+  padding: 10px 0;
+  color: #aeaeae;
+}
