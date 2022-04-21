@@ -1,7 +1,4 @@
-@font-face {
-  font-family: iransans;
-  src: url(/src/assets/fonts/AIranianSans.ttf);
-}
+
 * {
   margin: 0;
   padding: 0;
@@ -111,7 +108,10 @@ body.skills #navigation li:nth-child(2) a {
 body.projects #navigation li:nth-child(3) a {
   color: orange !important;
 }
-body.achievement #navigation li:nth-child(4) a {
+body.experience #navigation li:nth-child(4) a {
+  color: orange !important;
+}
+body.achievement #navigation li:nth-child(5) a {
   color: orange !important;
 }
 
@@ -250,4 +250,35 @@ hr + .row {
   text-align: justify;
   padding: 10px 0;
   color: #aeaeae;
+}
+
+@media screen and (max-width: 980px) {
+  body{
+    overflow-x: hidden;
+  }
+  #app{
+    flex-direction: column !important;
+    /* overflow-y: hidden; */
+    height: auto;
+    overflow-x: hidden;
+  }
+  #main-info{
+    order: 1;
+  }
+  #router-view{
+    order: 3;
+  }
+  #navigation{
+    flex-direction: row;
+    overflow-x: auto;
+    order: 2;
+    border-top: 1px solid #1a1a1a;
+  }
+  
+  #navigation li a img {
+    display: none;
+  }
+  #navigation > *+* {
+    border-left: 1px solid #1a1a1a;
+  }
 }

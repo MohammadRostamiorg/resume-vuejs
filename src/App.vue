@@ -1,4 +1,5 @@
 <template>
+
   <ul id="navigation">
     <li id="nav-about-li">
       <router-link to="/About">
@@ -16,6 +17,12 @@
       <router-link to="/Projects">
         <img src="./assets/images/nav-about-icon.png" alt="" srcset="" />
         <span>نمونه کار ها</span>
+      </router-link>
+    </li>
+    <li>
+      <router-link to="/Experience">
+        <img src="./assets/images/nav-about-icon.png" alt="" srcset="" />
+        <span>سابقه کار</span>
       </router-link>
     </li>
     <li>
@@ -53,4 +60,9 @@ export default {
 };
 </script>
 
-<style></style>
+<style>
+@font-face {
+  font-family: iransans;
+  src: url(assets/fonts/AIranianSans.ttf);
+}
+</style>

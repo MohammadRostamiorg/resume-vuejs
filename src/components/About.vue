@@ -22,14 +22,18 @@
             <span>20</span>
         </div>
         <div class="row">
-            <span>تاهل : </span>
-            <span>مجرد</span>
+            <span>شماره : </span>
+            <span>09123456789</span>
         </div>
         <div class="row">
-            <span>جنسیت : </span>
-            <span>مرد</span>
+            <span>ایمیل : </span>
+            <span>example@example.com</span>
         </div>
-    </div>
+        <div class="row">
+            <span>محل سکونت : </span>
+            <span>ایران</span>
+        </div>
+    </div> 
   </div>
 </template>
 
